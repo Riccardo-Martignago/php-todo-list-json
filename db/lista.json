@@ -1,0 +1,43 @@
+    {"todos": [
+        {
+        "text": "Fare la spesa",
+        "done": false
+        },
+        {
+        "text": "Portare a spasso il cane",
+        "done": false
+        },
+        {
+        "text": "Studiare per l'esame",
+        "done": true
+        },
+        {
+        "text": "Pulire la casa",
+        "done": false
+        },
+        {
+        "text": "Chiamare il dottore",
+        "done": true
+        },
+        {
+        "text": "Andare in palestra",
+        "done": false
+        },
+        {
+        "text": "Leggere un libro",
+        "done": false
+        },
+        {
+        "text": "Scrivere un'email",
+        "done": true
+        },
+        {
+        "text": "Preparare la cena",
+        "done": false
+        },
+        {
+        "text": "Organizzare l'armadio",
+        "done": false
+        }
+    ]
+}
