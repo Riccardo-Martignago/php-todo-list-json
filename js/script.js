@@ -3,18 +3,16 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: 'Hello Vue!'
+            todoList: [],
+            apiUrl: './list.php',
         }
     },
-    method:{
-        getData(){
-            axios.get('/user', {
-                params: {
-                    ID: 12345
-                }
-            })
-            .then(function (response) {
-                console.log(response);
+    methods:{
+        getDataList(){
+            axios.get(this.apiUrl)
+            .then((response) => {
+                console.log(response.data.todos);
+                this.todoList = response.data.todos;
             })
             .catch(function (error) {
                 console.log(error);
@@ -22,9 +20,9 @@ createApp({
             .finally(function () {
                 // always executed
             });
-        }  
+        } 
     },
     created(){
-        this.getData();
+        this.getDataList();
     }
 }).mount('#app')
