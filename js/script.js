@@ -5,6 +5,7 @@ createApp({
         return {
             todoList: [],
             apiUrl: './list.php',
+            textToAdd: '',
         }
     },
     methods:{
@@ -20,9 +21,17 @@ createApp({
             .finally(function () {
                 // always executed
             });
+        },
+        addTodo(newText){
+            objToAdd = {
+                text: newText,
+                done: false
+            };
+            this.todoList.push(objToAdd);
+            this.textToAdd = '';
         } 
     },
     created(){
         this.getDataList();
-    }
+    },
 }).mount('#app')

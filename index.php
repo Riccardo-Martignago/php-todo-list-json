@@ -15,10 +15,11 @@
     <main id="app">
         <h1>Lista Todo</h1>
         <ul>
-            <li v-for="element in todoList">
+            <li v-for="element in todoList" :class="element.done === true ? 'text-decoration-line-through' : ''">
                 {{ element.text }}
             </li>
         </ul>
+            <input type="text" name="todo-element" id="todo-element" @keyup.enter="addTodo(textToAdd)" v-model="textToAdd">
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
